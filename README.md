@@ -1,19 +1,15 @@
 
-## Meta Reinforcement Learning of Locomotion Policy for Quadruped Robots with Motor Stuck
+# Meta Reinforcement Learning of Locomotion Policy for Quadruped Robots with Motor Stuck
 
 
 This is the official repository for the paper: Meta Reinforcement Learning of Locomotion Policy for Quadruped Robots with Motor Stuck
 
-### Architecture
-
----
+## Architecture
 
 ![framework](https://github.com/chenci107/MetaRL_for_Quadruped/assets/48233618/6a499416-594c-47af-a3ee-0a93a0a10de6)
 
 
-### Requirements
-
----
+## Requirements
 
 ```
 conda create -n metarl python=3.8
@@ -28,9 +24,7 @@ pip install attrs --upgrade
 pip install scipy
 ```
 
-### Running 
-
----
+## Running 
 
 ```
 cd infer_policy
