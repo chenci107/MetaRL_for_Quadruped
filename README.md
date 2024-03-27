@@ -1,4 +1,18 @@
-## 1. 环境配置
+![image](https://github.com/chenci107/MetaRL_for_Quadruped/assets/48233618/d50c302c-ec7f-47a3-aa11-2aeb9b6321c7)
+## Meta Reinforcement Learning of Locomotion Policy for Quadruped Robots with Motor Stuck
+
+---
+
+This is the official repository for the paper: Meta Reinforcement Learning of Locomotion Policy for Quadruped Robots with Motor Stuck
+
+### Architecture
+---
+
+![framework](https://github.com/chenci107/MetaRL_for_Quadruped/assets/48233618/6a499416-594c-47af-a3ee-0a93a0a10de6)
+
+
+### Requirements
+---
 
 ```
 conda create -n metarl python=3.8
@@ -13,7 +27,7 @@ pip install attrs --upgrade
 pip install scipy
 ```
 
-## 2. 运行训练好的网络
+### Running 
 
 ```
 cd infer_policy
