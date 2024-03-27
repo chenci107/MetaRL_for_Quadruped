@@ -6,12 +6,14 @@ This is the official repository for the paper: Meta Reinforcement Learning of Lo
 
 ### Architecture
 
+---
 
 ![framework](https://github.com/chenci107/MetaRL_for_Quadruped/assets/48233618/6a499416-594c-47af-a3ee-0a93a0a10de6)
 
 
 ### Requirements
 
+---
 
 ```
 conda create -n metarl python=3.8
@@ -27,6 +29,8 @@ pip install scipy
 ```
 
 ### Running 
+
+---
 
 ```
 cd infer_policy
