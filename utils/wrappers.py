@@ -1,7 +1,7 @@
 import numpy as np
 from gym import Env
 from gym.spaces import Box
-import mujoco_py
+# import mujoco_py
 
 from utils.serializable import Serializable
 
@@ -146,29 +146,29 @@ class NormalizedBoxEnv(ProxyEnv, Serializable):
         return getattr(self._wrapped_env, attrname)
 
 
-class CameraWrapper(object):
-
-    def __init__(self, env,  *args, **kwargs):
-        self._wrapped_env = env
-        self.initialize_camera()
-
-    def get_image(self, width=256, height=256, camera_name=None):
-        # use sim.render to avoid MJViewer which doesn't seem to work without display
-        return self.sim.render(
-            width=width,
-            height=height,
-            camera_name=camera_name,
-        )
-
-    def initialize_camera(self):
-        # set camera parameters for viewing
-        sim = self.sim
-        viewer = mujoco_py.MjRenderContextOffscreen(sim)
-        camera = viewer.cam
-        camera.type = 1
-        camera.trackbodyid = 0
-        camera.elevation = -20
-        sim.add_render_context(viewer)
-
-    def __getattr__(self, attrname):
-        return getattr(self._wrapped_env, attrname)
+# class CameraWrapper(object):
+#
+#     def __init__(self, env,  *args, **kwargs):
+#         self._wrapped_env = env
+#         self.initialize_camera()
+#
+#     def get_image(self, width=256, height=256, camera_name=None):
+#         # use sim.render to avoid MJViewer which doesn't seem to work without display
+#         return self.sim.render(
+#             width=width,
+#             height=height,
+#             camera_name=camera_name,
+#         )
+#
+#     def initialize_camera(self):
+#         # set camera parameters for viewing
+#         sim = self.sim
+#         viewer = mujoco_py.MjRenderContextOffscreen(sim)
+#         camera = viewer.cam
+#         camera.type = 1
+#         camera.trackbodyid = 0
+#         camera.elevation = -20
+#         sim.add_render_context(viewer)
+#
+#     def __getattr__(self, attrname):
+#         return getattr(self._wrapped_env, attrname)

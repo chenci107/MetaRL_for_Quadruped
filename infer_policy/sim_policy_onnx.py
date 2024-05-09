@@ -20,8 +20,8 @@ def _product_of_gaussians(mus, sigmas_squared):
 class SimPolicy():
     def __init__(self):
         '''self.use_ib = False'''
-        self.context_encoder_path = 'onnx_model/' + 'meta_context_encoder_ref_meta_rl_model.onnx'
-        self.policy_path = 'onnx_model/' + 'meta_policy_ref_meta_rl_model.onnx'
+        self.context_encoder_path = 'onnx_model/' + 'ref_metarl_context_encoder_model.onnx'
+        self.policy_path = 'onnx_model/' + 'ref_metarl_policy_model.onnx'
         self.context_encoder = onnx.load(self.context_encoder_path)
         onnx.checker.check_model(self.context_encoder)
         self.policy = onnx.load(self.policy_path)

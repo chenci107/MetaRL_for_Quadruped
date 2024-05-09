@@ -1,7 +1,6 @@
 import os
 import inspect
-import xmltodict
-import tempfile
+
 
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(os.path.dirname(currentdir))
